@@ -1,0 +1,80 @@
+/* CSS animation code */
+@keyframes mymove {
+    0% {
+      transform: translateX(100%);
+      width: 300%;
+    }
+    50% {
+      transform: translateX(0%);
+      width: 100%;
+    }
+    100% {
+      transform: translateX(0%);
+      width: 100%;
+    }
+  }
+  
+  /* CSS code for the form and its elements */
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f9f9f9;
+  }
+  
+  .desing_form {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.3);
+    width: 90%; /* Adjust the width as needed */
+    max-width: 400px; /* Set a maximum width */
+    animation: mymove 1s;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    font-weight: bold;
+  }
+  
+  input[type="text"],
+  input[type="number"],
+  select {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  input[type="submit"],
+  button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+  }
+  
+  input[type="submit"]:hover,
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  /* CSS code for form validation */
+  input:invalid {
+    border: 2px dashed red;
+  }
+  
+  input:focus:invalid {
+    outline: none;
+  }

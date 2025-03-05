@@ -138,7 +138,27 @@
             </button>
         </div>
     </div>
+<!-- Visitor Count Section -->
+<div class="mt-6 text-center text-gray-300 text-sm">
+    <p>👥 Total Visitors: <span id="visitorCount">0</span></p>
+</div>
 
+<script>
+    // Function to update visitor count
+    function updateVisitorCount() {
+        let count = localStorage.getItem("visitorCount");
+        if (!count) {
+            count = 1;
+        } else {
+            count = parseInt(count) + 1;
+        }
+        localStorage.setItem("visitorCount", count);
+        document.getElementById("visitorCount").textContent = count;
+    }
+
+    // Call the function on page load
+    updateVisitorCount();
+</script>
     <script>
         let results = [];
         let fileContent = "";
